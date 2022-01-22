@@ -80,10 +80,11 @@ class Tasks extends React.Component {
     const allTasks = sortedTasks
                     .filter(task => task.name.toLowerCase().includes(searchTerm.toLowerCase()))
                     .map((task, index) => (
+
       <div key={index} className="col-md-9 col-lg-4">
         <div className="card text-dark bg-light mb-3">
           <div className="card-header">
-            <h4 className="card-title">{task.name}</h4>
+            <h4 className="card-title" >{task.name}</h4>
           </div>
           <div className="card-body">
             <h6> Status: {task.status}</h6>
@@ -96,7 +97,10 @@ class Tasks extends React.Component {
             </h6>
           </div>
           <Link to={`/tasks/${task.id}`} className="btn custom-button">
-            <button type="button" className="btn btn-success">View Task</button>
+            <button type="button" className="btn btn-success">
+              <i class="bi bi-search"></i>
+              <span> View Task </span>
+            </button>
           </Link>
         </div>
       </div>  
@@ -112,50 +116,52 @@ class Tasks extends React.Component {
 
 
     return (
-      <>
+      <div className="py-2">
         <section className="jumbotron jumbotron-fluid text-center">
-          <div className="container py-5">
+          <div className="container py-2">
             <Navbar />
           </div>
         </section>
 
-        <div className="py-5">
+        <div className="py-4">
           <main className="container">
             <div className="row" style={{ display: "flex" }}>
-
               <form className="col-sm-12 col-lg-3 d-flex">
-                <input type = "text" placeholder="Search" onChange={(event)=>{this.onSearch(event.target.value);}}></input>
+                <input type = "text" placeholder="Search" style = {{fontSize: '20px'}} onChange={(event)=>{this.onSearch(event.target.value);}}></input>
               </form>
 
-              <div className="col-sm-12 col-lg-1" style={{ marginLeft: "auto" }}>
-                <div className="btn button">
+              <div className="col-sm-12 col-md-12 col-lg-1 d-flex" style={{ marginLeft: "auto" }}>
                   <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Sort
+                    <i className="bi bi-sort-down"></i>
+                    <span> Sort </span>
                   </button>
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a className="dropdown-item" onClick={() => this.onSort("default")}>Default</a></li>
                     <li><a className="dropdown-item" onClick={() => this.onSort("name")}>Name</a></li>
                     <li><a className="dropdown-item" onClick={() => this.onSort("status")}>Status</a></li>
-                    <li><a className="dropdown-item" onClick={() => this.onSort("importance")}>Importance</a></li>
+                    <li><a className="dropdown-item " onClick={() => this.onSort("importance")}>Importance</a></li>
                     <li><a className="dropdown-item" onClick={() => this.onSort("deadline")}>Deadline</a></li>
                   </ul>
-                </div>
               </div>
             </div>
+
             <br></br>
 
             <div className="row">
               {allTasks.length > 0 ? allTasks : noTask}
             </div>
 
-            <div className="col-sm-12 col-lg-2">
+            <div className="col-sm-12 col-lg-3">
               <Link to="/tasks/new" className="btn custom-button">
-                <button type="button" class="btn btn-primary">Create a new task</button>
+                <button type="button" class="btn btn-primary">
+                  <i class="bi bi-journal-plus"></i>
+                  <span> Create A New Task </span>
+                </button>
               </Link>
             </div>
           </main>
         </div>
-      </>
+      </div>
     );
   }
 

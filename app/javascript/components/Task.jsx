@@ -8,7 +8,6 @@ class Task extends React.Component {
   constructor(props) {
     super(props);
     this.state = {task: {name: ""}};
-    this.addHtmlEntities = this.addHtmlEntities.bind(this);
     this.deletetask = this.deletetask.bind(this);
   }
 
@@ -28,12 +27,6 @@ class Task extends React.Component {
       })
       .then(response => this.setState({task: response }))
       .catch(() => this.props.history.push("/tasks"));
-  }
-
-  addHtmlEntities(str) {
-    return String(str)
-      .replace(/&lt;/g, "<")
-      .replace(/&gt;/g, ">");
   }
 
   deletetask() {
@@ -66,53 +59,55 @@ class Task extends React.Component {
     return (  
       <div className="container py-5">
         <div className="card border-secondary mb-3">
-          <div className="card-header"> 
-            <h1 className="display-4">{task.name}</h1>
+          <div className="card-header" style = {{fontSize: '32px', fontWeight: '600',fontFamily: 'Roboto'}} > 
+            {task.name}
           </div>
+
           <div className="card-body text-secondary">
-            <h5 className="card-title">Details:</h5>
-            <p className="card-text">{task.details}</p>
+            <h4 className="card-title">Details:</h4>
+            <p className="card-text"  style = {{fontSize: '16px',  fontWeight: '300', fontFamily: 'Roboto'}} >{task.details}</p>
 
-            <h5 className="card-title">Status:</h5>
-            <p className="card-text">{task.status}</p>
+            <h4 className="card-title">Status:</h4>
+            <p className="card-text" style = {{fontSize: '16px',  fontWeight: '300', fontFamily: 'Roboto'}} >{task.status}</p>
 
-            <h5 className="card-title">Importance:</h5>
-            <p className="card-text">{task.importance}</p>
+            <h4 className="card-title">Importance:</h4>
+            <p className="card-text" style = {{fontSize: '16px',  fontWeight: '300', fontFamily: 'Roboto'}}>{task.importance}</p>
 
-            <h5 className="card-title">Deadline:</h5>
+            <h4 className="card-title">Deadline:</h4>
             <p className="card-text"> 
-              <Moment format="DD MMM YYYY">
+              <Moment format="DD MMM YYYY" style = {{fontSize: '16px',  fontWeight: '300', fontFamily: 'Roboto'}}>
                 {task.deadline}
               </Moment>
             </p>
+          </div>  
 
-          </div>
         </div>
 
-        <div className="container py-5">
-          <div className="row">
+        <div className="row">
 
             <div className="col-sm-12 col-lg-2">
               <Link to="/tasks" className="btn btn-primary mr-2">
-                Back to tasks
+                <i class="bi bi-box-arrow-in-left"></i>
+                <span> Back </span>
               </Link>
             </div>
 
             <div className="col-sm-12 col-lg-2">
               <Link to={`/tasks/${this.props.match.params.id}/edit`} className="btn btn-warning mr-2">
-                Edit Task
+                <i class="bi bi-pen-fill"></i>
+                <span> Edit Task </span>
               </Link>
             </div>
 
             <div className="col-sm-12 col-lg-2">
               <Popconfirm title="Are you sure you would want to delete this task?" onConfirm={this.deletetask} okText="Yes" cancelText="No">
                 <button type="button" className="btn btn-danger">
-                  Delete Task
+                  <i class="bi bi-trash"></i>
+                  <span> Delete Task </span>
                 </button>
               </Popconfirm>
             </div>
 
-          </div> 
         </div>
       </div>
     );

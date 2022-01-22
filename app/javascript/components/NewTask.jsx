@@ -16,13 +16,6 @@ class NewTask extends React.Component {
 
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.stripHtmlEntities = this.stripHtmlEntities.bind(this);
-  }
-
-  stripHtmlEntities(str) {
-    return String(str)
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
   }
 
   onChange(event) {
@@ -66,7 +59,7 @@ class NewTask extends React.Component {
 
   render() {
     return (
-      <TaskForm onSubmit={this.onSubmit} onChange={this.onChange} task={this.state} button_label="Save task" cancel_action="/tasks" />
+      <TaskForm onSubmit={this.onSubmit} onChange={this.onChange} task={this.state} button_label="Save Task" cancel_action="/tasks" />
     );
   }
 
