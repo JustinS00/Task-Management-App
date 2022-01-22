@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Name: Justin Siaw
+Matriculation number: A0224490Y
 
-Things you may want to cover:
+# CVWO Assignment Task Management Application
 
-* Ruby version
+This application is made using Ruby 3.0.3p157, Rails 7.0.0 and Puma version: 5.5.2.
 
-* System dependencies
+### To get started 
+1. Clone this repo by running $git clone -https://github.com/JustinS00/Task-Management-App on your terminal.
+2. Navigate into the project directory $cd Task-Management-App and install the dependencies for the project by runinng $npm install
+3. Run $rails db:migrate 
+4. Run $rails s
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-* Configuration
+## Additional Notes
+You may encounter some problems when running the application.
 
-* Database creation
+1. Webpacker have to be recompile. 
+Run $rails webpacker:install
+Refer to this [link](https://stackoverflow.com/questions/54113179/rails-webpackermanifestmissingentryerror-in-homeindex) for more help.
 
-* Database initialization
+2. 
+You may face RunTimeError (ExecJS::RuntimeError in Homepage#index). Refresh the page a couple of times and the issue will be fixed.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
