@@ -8,7 +8,7 @@ Matriculation number: A0224490Y
 This application is made using Ruby 3.0.3p157, Rails 7.0.0 and Puma version: 5.5.2.
 
 ### To get started 
-1. Clone this repo by running $git clone -https://github.com/JustinS00/Task-Management-App on your terminal.
+1. Clone this repo by running $git clone https://github.com/JustinS00/Task-Management-App on your terminal.
 2. Navigate into the project directory $cd Task-Management-App and install the dependencies for the project by runinng $npm install
 3. Run $rails db:migrate 
 4. Run $rails s
