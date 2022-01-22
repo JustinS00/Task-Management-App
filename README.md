@@ -21,6 +21,5 @@ You may encounter some problems when running the application.
 Run $rails webpacker:install
 Refer to this [link](https://stackoverflow.com/questions/54113179/rails-webpackermanifestmissingentryerror-in-homeindex) for more help.
 
-2. 
-You may face RunTimeError (ExecJS::RuntimeError in Homepage#index). Refresh the page a couple of times and the issue will be fixed.
+2. You may face RunTimeError (ExecJS::RuntimeError in Homepage#index). Refresh the page a couple of times and the issue will be fixed.
 
