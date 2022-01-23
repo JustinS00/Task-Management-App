@@ -28,13 +28,24 @@ class Tasks extends React.Component {
         .catch(() => this.props.history.push("/"));
   }
 
-  onSort = sortBy => {
+/**
+ * onSort = sortBy => {
     this.setState({sortBy});
   }
 
   onSearch = searchTerm => {
     this.setState({searchTerm});
   }
+  */
+
+  onSearch(searchTerm) {
+    this.setState({searchTerm});
+  }
+
+  onSort(sortBy) {
+    this.setState({sortBy});
+  }
+
 
   render() {
     const { sortBy, tasks, searchTerm} = this.state;
