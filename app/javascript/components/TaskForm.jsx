@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"
 import { TextField } from '@mui/material';
 import Moment from 'react-moment';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 export default function TaskForm(props) {
 

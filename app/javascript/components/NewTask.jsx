@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TaskForm from "./TaskForm";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 class NewTask extends React.Component {
   constructor(props) {
