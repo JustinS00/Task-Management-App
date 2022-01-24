@@ -1,9 +1,9 @@
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: justin
-  password: justin
+
+
 development:
   <<: *default
   database: myapp_development
