@@ -6,11 +6,9 @@ class UserGuide extends React.Component {
   render() {
     return(
       <div className="py-2">
-        <section className="jumbotron jumbotron-fluid text-center">
-          <div className="container py-2">
-            <Navbar />
-          </div>
-        </section>
+
+        <Navbar />
+
         <main className="container align-items-center justify-content-center">
           <div className="container py-4 align-items-center justify-content-center">
             <div className="container py-4">

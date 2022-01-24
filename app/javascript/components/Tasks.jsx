@@ -128,11 +128,9 @@ class Tasks extends React.Component {
 
     return (
       <div className="py-2">
-        <section className="jumbotron jumbotron-fluid text-center">
-          <div className="container py-2">
+
             <Navbar />
-          </div>
-        </section>
+
 
         <div className="py-4">
           <main className="container">

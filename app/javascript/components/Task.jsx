@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Moment from 'react-moment';
 import { Popconfirm, message } from 'antd';
-import 'antd/dist/antd.css';
 
 class Task extends React.Component {
   constructor(props) {

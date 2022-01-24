@@ -6,21 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-3.times do |i|
-  Task.create(
-    name: "Task #{i + 1}",
+Task.create(
+    name: "Sample Task",
     details: "Working on this",
     importance: "High",
     status: "Ongoing",
-    deadline: Date.new(2022,1,1)
-  )
-end
-
-
-Task.create(
-    name: "Learning Web Development",
-    details: "Working ",
-    importance: "Critical",
-    status: "Reviewing",
-    deadline: Date.new(2022,2,1)
+    deadline: Date.today()
 )
+
+
