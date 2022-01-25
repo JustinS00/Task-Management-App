@@ -18,7 +18,7 @@ class UserGuide extends React.Component {
             <div className="container py-4">
               <h4> 2. Fill up the details of your task </h4>
               <img src = "https://raw.githubusercontent.com/JustinS00/Task-Management-App/main/app/assets/images/NewTaskPage.png" style = {{width: "1080px", height: "400px" }}></img>
-              <h4> 3. Click on Save Task and you will be redirected back to the front page </h4>
+              <h4> 3. Click on Save Task then on Back to be redirected back to the front page </h4>
             </div>
             <div className="container py-4">
               <h4> 4. Sort or Search for your task using the Sort Button or the Search Bar respectively </h4>
