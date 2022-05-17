@@ -1,9 +1,5 @@
 # README
 
-Name: Justin Siaw
-
-Matriculation number: A0229940Y
-
 # CVWO Assignment Task Management Application
 
 This application is made using Ruby 3.0.3p157, Rails 7.0.0 and Puma version: 5.5.2.
