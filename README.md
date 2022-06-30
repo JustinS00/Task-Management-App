@@ -2,6 +2,12 @@
 
 # CVWO Assignment Task Management Application
 
+### Visit [Heroku] (https://my-simple-task-management-app.herokuapp.com) for a deployed version of the application 
+
+
+
+
+
 This application is made using Ruby 3.0.3p157, Rails 7.0.0 and Puma version: 5.5.2.
 
 ### To get started 
