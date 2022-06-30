@@ -2,7 +2,7 @@
 
 # CVWO Assignment Task Management Application
 
-Visit [Heroku] (https://my-simple-task-management-app.herokuapp.com) for a deployed version of the application 
+Visit [Heroku](https://my-simple-task-management-app.herokuapp.com) for a deployed version of the application 
 
 
 
